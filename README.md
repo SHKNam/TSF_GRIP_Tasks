@@ -76,6 +76,7 @@
 # **Task 2: Prediction using Unsupervised ML**
 
 **Task Overview:**
+
 - The task involved predicting the optimum number of clusters from the given 'Iris' dataset and representing the results visually.
 
 **Process:**
@@ -168,8 +169,129 @@ Description:
 **Optimal Number of Clusters:**
 
 - The Elbow graph showed a significant bend at 3 clusters, indicating that 3 is the optimal number of clusters for this dataset.
-Cluster Visualization:
+
+**Cluster Visualization:**
 
 **Cluster Scatter Plots:**
 
 - Scatter plots showed the clusters formed by the K-means algorithm. These plots confirmed that the algorithm effectively grouped similar data points together.
+
+
+# **Task 6: Prediction using Decision Tree Algorithm**
+
+**Task Overview:**
+
+The objective of this task was to create a Decision Tree classifier to predict the class of iris flowers based on their features and to visualize the classifier graphically. The purpose was to develop a model that can correctly classify new data and provide an interpretable decision-making process.
+
+**Process:**
+
+**Data Acquisition:**
+
+Dataset URL: 
+
+- The dataset was provided at the URL https://bit.ly/3kXTdox.
+
+Description: 
+
+- The dataset contains measurements of iris flowers from three species: Iris-setosa, Iris-versicolor, and Iris-virginica. Features include SepalLengthCm, SepalWidthCm, PetalLengthCm, and PetalWidthCm.
+
+**Data Exploration and Visualization:**
+
+**Loading the Data:**
+
+- The dataset was loaded into a pandas DataFrame.
+- The first few rows of the dataset were displayed to understand its structure.
+
+**Summary Statistics:**
+
+- Summary statistics provided insights into the data distribution.
+
+**Missing Values:**
+
+- The dataset was checked for any missing values, confirming there were none.
+
+**Visualizing Relationships:**
+
+- Pair plots were created using seaborn to visualize the relationships between features:
+- Iris-setosa was clearly separable from the other two species.
+- Iris-versicolor and Iris-virginica showed some overlap but could be partially separated by Petal Length and Petal Width.
+- Distribution histograms were created for each feature.
+- A correlation matrix heatmap was generated to visualize relationships between numerical features.
+
+**Data Preparation:**
+
+**Dropping Unnecessary Columns:**
+
+- The 'Id' column was dropped as it was not needed for classification.
+
+**Model Training:**
+
+**Splitting the Data:**
+
+- The data was split into features (X) and the target variable (y).
+- The target variable 'Species' was encoded using LabelEncoder.
+- The data was split into training and testing sets using a 70-30 split.
+
+**Training the Decision Tree Model:**
+
+- The Decision Tree classifier from the scikit-learn library was used.
+
+**Model Prediction:**
+
+**Making Predictions:**
+
+- The trained model was used to predict the classes of the test data.
+
+**Model Evaluation:**
+
+**Performance Metrics:**
+
+- Accuracy, Precision, Recall, and F1-Score were calculated to evaluate the model's performance.
+
+- The confusion matrix and classification report provided a detailed evaluation of the model.
+
+**Visualization of the Decision Tree:**
+
+- The Decision Tree was visualized using plot_tree from the scikit-learn library, showing the structure and decision rules.
+
+**Model Used:**
+
+**Decision Tree Classifier:**
+
+- The Decision Tree classifier was used to predict the class of iris flowers based on their features. This model is suitable for classification tasks and provides a clear, interpretable structure for decision making.
+
+**Results:**
+
+**Data Visualization:**
+
+- Pair Plots and Histograms:
+
+- Pair plots and histograms showed the clear separability of Iris-setosa from the other two species and some overlap between Iris-versicolor and Iris-virginica.
+
+Heatmap:
+
+- The correlation matrix heatmap provided insights into the relationships between numerical features.
+
+**Model Performance:**
+
+- Accuracy: 1.00
+
+- Precision: 1.00
+
+- Recall: 1.00
+
+- F1-Score: 1.00
+
+- These metrics indicated that the model achieved perfect accuracy on the test data, correctly classifying all instances.
+
+**Confusion Matrix:**
+
+- The confusion matrix showed that all instances were correctly classified, with no misclassification.
+
+**Classification Report:**
+
+- The classification report confirmed perfect precision, recall, and F1-scores for all classes.
+
+**Decision Tree Visualization:**
+
+- The Decision Tree was visualized, showing the structure of the classifier and the decision rules based on the features.
